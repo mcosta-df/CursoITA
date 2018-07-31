@@ -1,0 +1,15 @@
+
+public class Principal {
+
+	public static void main(String[] args) {
+		
+		carro c1 = new carro();
+		
+		c1.potencia = 10;
+		c1.nome = "Corcel";
+		c1.velocidade = 0;
+		
+		c1.imprimir();
+	}
+
+}

@@ -1,0 +1,16 @@
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class TesteCompra {
+
+	@Test
+	public class compraAVista {
+		
+		Compra c = new Compra(500);
+		assertEquals(1, c.getNumeroParcelas());
+		assertEquals(500,c.getValorTotal());
+		assertEquals(500, c.getValorParcela());
+	}
+
+}

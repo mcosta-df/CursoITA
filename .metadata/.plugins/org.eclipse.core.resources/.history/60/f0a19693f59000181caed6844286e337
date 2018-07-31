@@ -1,0 +1,20 @@
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class TestePaciente {
+
+	@Test
+	void DadoUmPacienteComAltura180cmEPeso50kg() {
+		paciente p = new paciente(1.80, 50);
+		assertEquals("Baixo peso muito grave", p.diagnostico());	
+	}
+	
+	@Test
+	void DadoUmPacienteComAltura180cmEPeso70Kg() {
+		paciente p =  new paciente(1.80, 70); 
+		assertEquals("Baixo peso grave", p.diagnostico());
+		
+	}
+
+}

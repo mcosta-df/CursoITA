@@ -1,0 +1,26 @@
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class TesteCompra {
+
+	@Test
+	void compraAVista() {
+		Compra c = new Compra(500);
+		
+		assertEquals(1,  c.getNumeroParcelas());
+		assertEquals(500,  c.valorTotal);
+		assertEquals(500,  c.getValorParcela());
+		
+	}
+	
+	@Test
+	public void compraParcelada() {
+		Compra c = new Compra(4, 1000);
+		
+		assertEquals(4,  c.numeroParcelas);
+		assertEquals(1000,  c.valorTotal);
+		assertEquals(240, c.getValorParcela());
+	}
+
+}

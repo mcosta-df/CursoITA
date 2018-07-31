@@ -1,0 +1,20 @@
+
+public class paciente {
+	double peso;
+	double altura;
+	
+	public void paciente(double peso, double altura) {
+		setPeso(peso);
+		setAltura(altura);
+	}
+
+	private void setAltura(int altura) {
+		this.altura = altura;
+		
+	}
+
+	private void setPeso(int peso) {
+		this.peso = peso;
+		
+	}
+}
