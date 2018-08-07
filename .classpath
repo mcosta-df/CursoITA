@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="AntesDepois/src"/>
+	<classpathentry kind="src" path="Banco/src"/>
+	<classpathentry kind="src" path="CadeiaConstrutores/src"/>
+	<classpathentry kind="src" path="Carros/src"/>
+	<classpathentry kind="src" path="Carros/teste"/>
+	<classpathentry kind="src" path="Comercio/src"/>
+	<classpathentry kind="src" path="Escola/src"/>
+	<classpathentry kind="src" path="EstaticaVsInstancia/src"/>
+	<classpathentry kind="src" path="ExperienciaAcesso/src"/>
+	<classpathentry kind="src" path="Paciente/src"/>
+	<classpathentry kind="src" path="Pontuacao/src"/>
+	<classpathentry kind="output" path="AntesDepois/bin"/>
+</classpath>

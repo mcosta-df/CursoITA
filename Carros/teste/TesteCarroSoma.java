@@ -1,27 +1,33 @@
 import static org.junit.jupiter.api.Assertions.*;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-class TesteCarro {
+class TesteCarroSoma {
 
-	@Test
-	public void testAcelerar() {
-		Carro c = new Carro();
-		c.potencia = 10;
-		c.acelarar();
-		assertEquals(10, c.getVelocidade());
+	CarroDeCorrida c;
+	
+	@BeforeEach
+	public void inicializaCarro() {
+		c = new CarroSoma("teste", 10, 100);
+		
 	}
+	
 	
 	@Test
 	public void testCarroParado() {
-		Carro c = new Carro();
 		assertEquals(0, c.getVelocidade());
 	}
 	
 	@Test
+	public void testAcelerar() {
+		c.acelarar();
+		assertEquals(10, c.getVelocidade());
+	}
+	
+	
+	@Test
 	public void testFrear() {
-		Carro c = new Carro();
-		c.potencia = 10;
 		c.acelarar();
 		c.frear();
 		assertEquals(5, c.getVelocidade());
@@ -29,14 +35,20 @@ class TesteCarro {
 	
 	@Test
 	public void testFrearAteZero() {
-		Carro c = new Carro();
-		c.potencia = 10;
 		c.acelarar();
 		c.frear();
 		c.frear();
 		c.frear();
 		c.frear();
 		assertEquals(0, c.getVelocidade());
+	}
+	
+	@Test
+	public void testAcelerarAteVelocidadeMaxima() {
+		for( int i = 0; i < 14; i++) {
+			c.acelarar();
+		}
+		assertEquals(100, c.getVelocidade());
 	}
 
 }
